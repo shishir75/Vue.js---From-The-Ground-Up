@@ -41,8 +41,8 @@
 
         <!--computed properties -->
         <input type="text" v-model="price">
-        <p>Tax {{ taxFormatted }}</p>
-        <p>Total {{ totalFormatted }}</p>
+        <p>Tax {{ moneyFormat(tax) }}</p>
+        <p>Total {{ moneyFormat(total) }}</p>
 
     </div>
 
@@ -68,6 +68,12 @@
                 price: 100,
             },
 
+           methods: {
+             moneyFormat: function (price) {
+                return '$' + price;
+             },
+           },
+
            computed: {
                tax: function () {
                    return parseInt(this.price) * 0.1;
@@ -76,14 +82,6 @@
                total: function () {
                    return parseInt(this.price) + parseInt(this.tax);
                },
-
-               taxFormatted: function () {
-                    return '$' + this.tax;
-               },
-
-               totalFormatted: function () {
-                    return '$' + this.total;
-               }
            },
         });
     </script>
