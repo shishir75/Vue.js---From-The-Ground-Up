@@ -7,18 +7,37 @@
 </head>
 <body>
     <div id="app">
-        <h1 v-bind:title="menu">{{ title }}</h1>
+        <h1 :title="menu">{{ title }}</h1>
         <p v-text="content"></p>
+
+        <input type="text" v-model="content">
+
+        
+        <!--Two way data binding -->
+        <ul>
+            <li v-for="todo in items">{{ todo }}</li>
+        </ul>
+
+        <input type="text" v-model="item">
+        <button @click="items.push(item)">Add Item</button>
+
+
+
     </div>
 
 
     <script>
-        new Vue({
+       var vue = new Vue({
             el: '#app',
             data: {
                 title: 'This is my Title',
                 content: 'This is my content.',
                 menu: 'This is a menu.',
+                item: '',
+                items: [
+                  'item1',
+                  'item2',
+                ],
             }
         });
     </script>
