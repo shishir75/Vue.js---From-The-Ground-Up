@@ -12,7 +12,7 @@
 
         <input type="text" v-model="content">
 
-        
+
         <!--Two way data binding -->
         <ul>
             <li v-for="todo in items">{{ todo }}</li>
@@ -21,7 +21,22 @@
         <input type="text" v-model="item">
         <button @click="items.push(item)">Add Item</button>
 
+        <!--if else condition -->
+        <h3 v-if="hidden">A simple text</h3>
+        <h3 v-else>This is another simple text</h3>
 
+        <h2>Conditional rendering with if else condition</h2>
+        <ul>
+            <li v-for="list in lists">{{ list.text}}
+                <span style="color: green" v-if="list.checked">Checked</span>
+                <span style="color: red" v-else>Not Checked</span>
+
+                <button @click="list.checked = !list.checked">
+                    <span v-if="list.checked" style="color: red">Uncheck</span>
+                    <span v-else style="color: green">Check</span>
+                </button>
+            </li>
+        </ul>
 
     </div>
 
@@ -38,6 +53,12 @@
                   'item1',
                   'item2',
                 ],
+                hidden: false,
+                lists: [
+                    {text:'Text1', checked: true},
+                    {text:'Text2', checked: false},
+                    {text:'Text3', checked: true},
+                ]
             }
         });
     </script>
