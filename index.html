@@ -38,6 +38,12 @@
             </li>
         </ul>
 
+
+        <!--computed properties -->
+        <input type="text" v-model="price">
+        <p>Tax {{ taxFormatted }}</p>
+        <p>Total {{ totalFormatted }}</p>
+
     </div>
 
 
@@ -58,8 +64,27 @@
                     {text:'Text1', checked: true},
                     {text:'Text2', checked: false},
                     {text:'Text3', checked: true},
-                ]
-            }
+                ],
+                price: 100,
+            },
+
+           computed: {
+               tax: function () {
+                   return parseInt(this.price) * 0.1;
+               },
+
+               total: function () {
+                   return parseInt(this.price) + parseInt(this.tax);
+               },
+
+               taxFormatted: function () {
+                    return '$' + this.tax;
+               },
+
+               totalFormatted: function () {
+                    return '$' + this.total;
+               }
+           },
         });
     </script>
 
