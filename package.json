@@ -1,0 +1,24 @@
+{
+  "name": "vue-from-scratch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shishir75/Vue.js---From-The-Ground-Up.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shishir75/Vue.js---From-The-Ground-Up/issues"
+  },
+  "homepage": "https://github.com/shishir75/Vue.js---From-The-Ground-Up#readme",
+  "devDependencies": {
+    "cross-env": "^7.0.0",
+    "laravel-mix": "^5.0.1"
+  }
+}
