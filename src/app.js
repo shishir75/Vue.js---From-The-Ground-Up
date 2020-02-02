@@ -1,25 +1,12 @@
 import Vue from 'vue';
+import Accordion from "./components/Accordion";
 
-Vue.component('accordion', {
-    props: ['item'],
 
-    template: `
-                <div>
-                    <h4>{{ item.title }}</h4>
-                    <a href="#" @click="toggle = !toggle">Details</a>
-                    <p v-if="toggle">{{ item.description}}</p>
-                </div>
-            `,
-
-    data: function () {
-        return {
-            toggle: false,
-        }
-    }
-});
-
-var vue = new Vue({
+new Vue({
     el: '#app',
+    components: {
+        Accordion,
+    },
     data: {
         items: [
             {id:1, title: 'Title 1', description: 'Description for Title 1.'},
