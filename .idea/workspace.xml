@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba1c2276-df8d-43e1-8a2d-dd05a66caf48" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Dropdown.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/List.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dropdown.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dropdown.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/List.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/List.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +69,7 @@
       <workItem from="1580829895135" duration="613000" />
       <workItem from="1580838092119" duration="1593000" />
       <workItem from="1580914070588" duration="295000" />
-      <workItem from="1580931650921" duration="3186000" />
+      <workItem from="1580931650921" duration="4704000" />
     </task>
     <servers />
   </component>

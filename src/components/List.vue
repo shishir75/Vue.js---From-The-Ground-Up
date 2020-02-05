@@ -1,8 +1,8 @@
 <template>
     <div>
-        <p>ITEM</p>
+        <p v-text="dropdownResult"></p>
 
-        <dropdown></dropdown>
+        <dropdown @update:option="optionUpdate"></dropdown>
 
     </div>
 </template>
@@ -15,6 +15,18 @@
 
         components: {
             Dropdown,
+        },
+
+        data: function() {
+          return {
+              dropdownResult: '',
+          }
+        },
+
+        methods: {
+            optionUpdate: function (value) {
+                this.dropdownResult = value;
+            }
         }
     }
 </script>

@@ -132,8 +132,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "Dropdown"
+  name: "Dropdown",
+  data: function data() {
+    return {
+      selectedOption: null
+    };
+  },
+  methods: {
+    optionChanged: function optionChanged(value) {
+      this.$emit('update:option', this.selectedOption);
+    }
+  }
 });
 
 /***/ }),
@@ -162,6 +173,16 @@ __webpack_require__.r(__webpack_exports__);
   name: "List",
   components: {
     Dropdown: _Dropdown__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  data: function data() {
+    return {
+      dropdownResult: ''
+    };
+  },
+  methods: {
+    optionUpdate: function optionUpdate(value) {
+      this.dropdownResult = value;
+    }
   }
 });
 
@@ -691,22 +712,51 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c(
+    "select",
+    {
+      directives: [
+        {
+          name: "model",
+          rawName: "v-model",
+          value: _vm.selectedOption,
+          expression: "selectedOption"
+        }
+      ],
+      attrs: { name: "dropdown", id: "dropdown" },
+      on: {
+        change: [
+          function($event) {
+            var $$selectedVal = Array.prototype.filter
+              .call($event.target.options, function(o) {
+                return o.selected
+              })
+              .map(function(o) {
+                var val = "_value" in o ? o._value : o.value
+                return val
+              })
+            _vm.selectedOption = $event.target.multiple
+              ? $$selectedVal
+              : $$selectedVal[0]
+          },
+          _vm.optionChanged
+        ]
+      }
+    },
+    [
+      _c("option", { attrs: { value: "null", disabled: "" } }, [
+        _vm._v("Select an Option")
+      ]),
+      _vm._v(" "),
+      _c("option", { attrs: { value: "Option 1" } }, [_vm._v("Option 1")]),
+      _vm._v(" "),
+      _c("option", { attrs: { value: "Option 2" } }, [_vm._v("Option 2")]),
+      _vm._v(" "),
+      _c("option", { attrs: { value: "Option 3" } }, [_vm._v("Option 3")])
+    ]
+  )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("select", { attrs: { name: "dropdown", id: "dropdown" } }, [
-      _c("option", { attrs: { value: "0" } }, [_vm._v("Option 1")]),
-      _vm._v(" "),
-      _c("option", { attrs: { value: "1" } }, [_vm._v("Option 2")]),
-      _vm._v(" "),
-      _c("option", { attrs: { value: "2" } }, [_vm._v("Option 3")])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -728,7 +778,15 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_c("p", [_vm._v("ITEM")]), _vm._v(" "), _c("dropdown")], 1)
+  return _c(
+    "div",
+    [
+      _c("p", { domProps: { textContent: _vm._s(_vm.dropdownResult) } }),
+      _vm._v(" "),
+      _c("dropdown", { on: { "update:option": _vm.optionUpdate } })
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
