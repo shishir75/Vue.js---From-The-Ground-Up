@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba1c2276-df8d-43e1-8a2d-dd05a66caf48" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Accordion.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Dropdown.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/List.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,6 +49,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\xampp\htdocs\Vue JS\vue-from-scratch" />
       <recent name="F:\xampp\htdocs\Vue JS\vue from scratch" />
     </key>
   </component>
@@ -64,7 +66,11 @@
       <workItem from="1580563095729" duration="6884000" />
       <workItem from="1580582334380" duration="4243000" />
       <workItem from="1580646039942" duration="1741000" />
-      <workItem from="1580647927314" duration="2932000" />
+      <workItem from="1580647927314" duration="4175000" />
+      <workItem from="1580829895135" duration="613000" />
+      <workItem from="1580838092119" duration="1593000" />
+      <workItem from="1580914070588" duration="295000" />
+      <workItem from="1580931650921" duration="3186000" />
     </task>
     <servers />
   </component>
@@ -75,6 +81,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="740" y="310" key="FileChooserDialogImpl" timestamp="1580914365513">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="740" y="310" key="FileChooserDialogImpl/0.30.1920.1050@0.30.1920.1050" timestamp="1580914365513" />
     <state x="461" y="196" key="SettingsEditor" timestamp="1580563840133">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
